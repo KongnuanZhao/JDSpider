@@ -1,0 +1,12 @@
+[INFO  - 2016-08-16T04:41:42.949Z] GhostDriver - Main - running on port 38294
+[INFO  - 2016-08-16T04:41:43.899Z] Session [bb73d580-636b-11e6-869f-c563d473a143] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":false,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36","webSecurityEnabled":true}
+[INFO  - 2016-08-16T04:41:43.899Z] Session [bb73d580-636b-11e6-869f-c563d473a143] - page.customHeaders:  - {}
+[INFO  - 2016-08-16T04:41:43.899Z] Session [bb73d580-636b-11e6-869f-c563d473a143] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":false,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"}
+[INFO  - 2016-08-16T04:41:43.899Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: bb73d580-636b-11e6-869f-c563d473a143
+[ERROR - 2016-08-16T04:41:51.482Z] Session [bb73d580-636b-11e6-869f-c563d473a143] - page.onError - msg: Baitiao service error with timeout.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2016-08-16T04:41:51.482Z] Session [bb73d580-636b-11e6-869f-c563d473a143] - page.onError - stack:
+  error (http://static.360buyimg.com/item/default/1.0.13/components/??common/common.js,address/address.js,prom/prom.js,colorsize/colorsize.js,buytype/buytype.js,baitiao/baitiao.js,buybtn/buybtn.js,track/track.js,suits/suits.js,crumb/crumb.js,fittings/fittings.js,detail/detail.js,contact/contact.js,popbox/popbox.js,preview/preview.js,info/info.js,imcenter/imcenter.js,jdservice/jdservice.js,commitments/commitments.js,lazyinit/lazyinit.js:18)
+
+  phantomjs://platform/console++.js:263 in error
