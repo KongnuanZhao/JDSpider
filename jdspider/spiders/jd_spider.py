@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 from jdspider.items import JdSubModelItem
 from jdspider.test import jdbc
-
+from time import sleep
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -25,7 +25,15 @@ class JD_Spider(scrapy.Spider):
                 pass
             else:
                 url = 'http:' + url
-            jd_respone = requests.get(url)
+            try:
+                jd_respone = requests.get(url)
+            except requests.exceptions.ConnectionError, e:
+                print e
+                for i in range(3):
+                    sleep(1)
+                    response = requests.get(url)
+                    if response is not None:
+                        break
             soup = BeautifulSoup(jd_respone.text, 'lxml')
             choose = soup.find('div', class_='summary p-choose-wrap')
             if choose is None:

@@ -6,7 +6,7 @@ import sys
 insertBrand = "insert into jd_mobile_brand(name,url,link) values(%s,%s,%s)"
 selectBrand = "select * from jd_mobile_brand"
 insertModel = "insert into jd_mobile_model(brand_id,name,url,price) values(%s,%s,%s,%s)"
-selectModel = "select * from jd_mobile_model where id >= 298"
+selectModel = "select * from jd_mobile_model where id >= 357"
 selectSubModel = "select * from jd_sub_model"
 
 

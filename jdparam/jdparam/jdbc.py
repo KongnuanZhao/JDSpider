@@ -7,7 +7,7 @@ insertBrand = "insert into jd_mobile_brand(name,url,link) values(%s,%s,%s)"
 selectBrand = "select * from jd_mobile_brand"
 insertModel = "insert into jd_mobile_model(brand_id,name,url,price) values(%s,%s,%s,%s)"
 selectModel = "select * from jd_mobile_model"
-selectSubModel = "select * from jd_sub_model"
+selectSubModel = "select * from jd_sub_model where id not in (select sub_mobile_id from jd_mobile_param)"
 
 
 def getConn():

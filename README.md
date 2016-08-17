@@ -32,18 +32,18 @@ input_date date DEFAULT CURRENT_DATE
 )
 
 参数表字段说明：
- 主体 bodyinfos
+  主体 bodyinfos
  基本信息 base_info
  操作系统 mobile_os
  主芯片  mobile_cpu
- 网络支持 mobile_internet
+ 网络支持 mobile_internet 网络
  存储 mobile_store
- 屏幕 mobile_screen
+ 屏幕 mobile_screen 显示
  前置摄像头 front_camera
- 后置摄像头 rear_camera
+ 后置摄像头 rear_camera 摄像功能
  电池信息 battery_info
- 数据接口 data_interface
- 手机特性 mobile_feature
+ 数据接口 data_interface 传输功能
+ 手机特性 mobile_feature 其他
 
 create table jd_mobile_param(
 id serial PRIMARY KEY,
