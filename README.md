@@ -30,3 +30,35 @@ url text,
 price text,
 input_date date DEFAULT CURRENT_DATE
 )
+
+参数表字段说明：
+ 主体 bodyinfos
+ 基本信息 base_info
+ 操作系统 mobile_os
+ 主芯片  mobile_cpu
+ 网络支持 mobile_internet
+ 存储 mobile_store
+ 屏幕 mobile_screen
+ 前置摄像头 front_camera
+ 后置摄像头 rear_camera
+ 电池信息 battery_info
+ 数据接口 data_interface
+ 手机特性 mobile_feature
+
+create table jd_mobile_param(
+id serial PRIMARY KEY,
+sub_mobile_id int REFERENCES jd_sub_model(id),
+bodyinfos text,
+base_info text,
+mobile_os text,
+mobile_cpu text,
+mobile_internet text,
+mobile_store text,
+mobile_screen text,
+front_camera text,
+rear_camera text,
+battery_info text,
+data_interface text,
+mobile_feature text,
+input_date date DEFAULT CURRENT_DATE
+)

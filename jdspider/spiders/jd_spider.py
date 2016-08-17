@@ -28,6 +28,8 @@ class JD_Spider(scrapy.Spider):
             jd_respone = requests.get(url)
             soup = BeautifulSoup(jd_respone.text, 'lxml')
             choose = soup.find('div', class_='summary p-choose-wrap')
+            if choose is None:
+                choose = soup.find('div', id='choose')
             items = choose.findAll('div', class_='item')
             for item in items:
                 href = item.find('a')['href']
