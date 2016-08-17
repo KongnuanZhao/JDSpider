@@ -1,7 +1,7 @@
 爬取思路，先爬取所有手机品牌，然后爬取手机品牌下的型号，再爬取某个型号下的具体机型，最后爬取具体机型的具体参数
 爬取品牌和型号逻辑比较简单，执行test目录下的`jd_brand.py`和`jd_model`爬取入库
 然后执行 `scrapy crawl jd_spider`爬取具体机型
-最后 爬取具体机型对应的参数 `scrapy crawl jd_mobile_parm`
+最后 `cd jdparam`爬取具体机型对应的参数 `scrapy crawl jd_param`
 
 建表
 create table jd_mobile_brand(
