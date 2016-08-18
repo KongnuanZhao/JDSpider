@@ -23,19 +23,23 @@ class JD_Spider(scrapy.Spider):
             location = ""
             try:
                 head = requests.head(url)
-                location = head.headers['location']
-            except requests.exceptions.ConnectionError, e:
+                location = head.headers.get('location')
+            except Exception, e:
                 print e
                 for i in range(3):
-                    location = requests.head(url)
-                    if location is not None:
+                    head = requests.head(url)
+                    if head is not None:
+                        location = head.headers.get('location')
                         break
-            if location.find('hk') != -1:
-                param_url = location + '#none'
-                yield scrapy.Request(param_url, meta={'sub_model_id': sub_model_id}, callback=self.parse2)
-            else:
+            if location is None:
                 param_url = url + '#product-detail'
                 yield scrapy.Request(param_url, meta={'sub_model_id': sub_model_id}, callback=self.parse)
+
+            elif location.find('hk') != -1:
+                param_url = location + '#none'
+                yield scrapy.Request(param_url, meta={'sub_model_id': sub_model_id}, callback=self.parse2)
+            elif location.find('http://www.jd.com?c') != -1:
+                continue
 
     def parse(self, response):
         sub_mobile_id = response.meta["sub_model_id"]
