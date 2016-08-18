@@ -46,18 +46,18 @@ class JD_Spider(scrapy.Spider):
 
         item = JdparamItem()
         item['sub_mobile_id'] = sub_mobile_id
-        # item['bodyinfos'] = ""
-        # item['base_info'] = ""
-        # item['mobile_os'] = ""
-        # item['mobile_cpu'] = ""
-        # item['mobile_internet'] = ""
-        # item['mobile_store'] = ""
-        # item['mobile_screen'] = ""
-        # item['front_camera'] = ""
-        # item['rear_camera'] = ""
-        # item['battery_info'] = ""
-        # item['data_interface'] = ""
-        # item['mobile_feature'] = ""
+        item['bodyinfos'] = ""
+        item['base_info'] = ""
+        item['mobile_os'] = ""
+        item['mobile_cpu'] = ""
+        item['mobile_internet'] = ""
+        item['mobile_store'] = ""
+        item['mobile_screen'] = ""
+        item['front_camera'] = ""
+        item['rear_camera'] = ""
+        item['battery_info'] = ""
+        item['data_interface'] = ""
+        item['mobile_feature'] = ""
         # # store = response.xpath(u'//h3[text()="\u5b58\u50a8"]/text()').extract()
         # store = response.xpath(u'//h3[text()="\u4e3b\u4f53"]/parent::node()//text()').extract()
         # body = response.xpath(u'//h3[text()="\u4e3b\u4f53"]/parent::node()//preceding-sibling::node()//text()').extract()
